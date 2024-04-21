@@ -1,0 +1,26 @@
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    k6_transpile_bundle_test:
+        name: Transpile, bundle and run
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: oven-sh/setup-bun@v1
+
+            - run: bun bundle
+
+            - name: Run local k6 test
+              uses: grafana/k6-action@v0.3.1
+              with:
+                  filename: dist/index.js
+                  flags: --out json=results.json
+
+            - name: Upload performance test results
+              uses: actions/upload-artifact@v4
+              with:
+                  name: k6-report
+                  path: results.json

@@ -1,0 +1,29 @@
+{
+	"name": "k6-typescript-template",
+	"version": "1.0.0",
+	"author": "Vinicios Lugli <vinicioslugli@gmail.com>",
+	"repository": "https://github.com/ViniciosLugli/k6-typescript-template",
+	"scripts": {
+		"bundle": "webpack"
+	},
+	"devDependencies": {
+		"@babel/core": "7.24.4",
+		"@babel/plugin-proposal-class-properties": "7.18.6",
+		"@babel/plugin-proposal-object-rest-spread": "7.20.7",
+		"@babel/preset-env": "7.24.4",
+		"@babel/preset-typescript": "7.24.1",
+		"@types/k6": "^0.50.0",
+		"@types/webpack": "5.28.5",
+		"babel-loader": "9.1.3",
+		"clean-webpack-plugin": "4.0.0",
+		"copy-webpack-plugin": "^12.0.2",
+		"typescript": "5.4.5",
+		"webpack": "5.91.0",
+		"webpack-cli": "5.1.4",
+		"webpack-glob-entries": "^1.0.1"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"terser-webpack-plugin": "^5.3.10"
+	}
+}
